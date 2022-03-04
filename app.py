@@ -3,7 +3,7 @@ import imageio
 
 from nsfw import classify
 
-image = imageio.imread("images/image.jpg")
+image = Image.open("images/image.jpg")
 sfw, nsfw = classify(image)
 
 print("SFW Probability: {}".format(sfw))
