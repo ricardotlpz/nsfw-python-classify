@@ -1,11 +1,9 @@
 import PIL.Image as Image
-import imageio as io
-import matplotlib
+import imageio
 
 from nsfw import classify
 
-image = io.imread("images/image.jpg",plugin='matplotlib')
-#with Image.open("images/image.jpg") as image:
+image = imageio.imread("images/image.jpg",pilmode="RGB")
 sfw, nsfw = classify(image)
 
 print("SFW Probability: {}".format(sfw))
