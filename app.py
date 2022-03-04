@@ -1,9 +1,10 @@
 import PIL.Image as Image
-import imageio 
+import imageio as io
+import matplotlib
 
 from nsfw import classify
 
-image = imageio.imread(image, pilmode="RGB")
+image = io.imread(filename,plugin='matplotlib')
 #with Image.open("images/image.jpg") as image:
 sfw, nsfw = classify(image)
 
