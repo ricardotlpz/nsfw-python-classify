@@ -4,7 +4,7 @@ import matplotlib
 
 from nsfw import classify
 
-image = io.imread(filename,plugin='matplotlib')
+image = io.imread("images/image.jpg",plugin='matplotlib')
 #with Image.open("images/image.jpg") as image:
 sfw, nsfw = classify(image)
 
